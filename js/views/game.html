@@ -1,0 +1,17 @@
+<div class="container-fluid">
+    <div class="well" style="margin: 110px auto auto;width: 700px;">
+        <h1>Trump or False</h1>
+        <h3>Score: {{score}}</h3>
+        <hr>
+
+        <blockquote ng-if="tweets.length > 0">
+            <p>{{randTweet.content}}</p>
+            <footer>Donald Trump</footer>
+        </blockquote>
+
+        <h1 ng-if="tweets.length == 0">You Win!</h1>
+
+        <button class="btn btn-success" ng-click="check('trump')">Trump</button>
+        <button class="btn btn-danger" ng-click="check('false')">False</button>
+    </div>
+</div>
