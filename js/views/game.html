@@ -1,17 +1,19 @@
-<div class="container-fluid">
-    <div class="well" style="margin: 110px auto auto;width: 700px;">
+<div class="container-fluid" style="margin: 110px auto auto;width: 700px;">
+    <div class="alert alert-danger" ng-if="lost"><b>Nope!</b> You got that one wrong...</div>
+
+    <div class="well">
         <h1>Trump or False</h1>
         <h3>Score: {{score}}</h3>
         <hr>
 
-        <blockquote ng-if="tweets.length > 0">
-            <p>{{randTweet.content}}</p>
+        <blockquote ng-if="score < 30">
+            <p>{{randTweet.text}}</p>
         </blockquote>
 
-        <h1 ng-if="tweets.length == 0">You Win!</h1>
+        <h1 ng-if="score >= 30">You Win!</h1>
 
-        <div ng-if="tweets.length > 0">
-            <button class="btn btn-success" ng-click="check('trump')"><img src="https://image.winudf.com/132/a57ab20c85d296/icon=100x.png">Trump</button>
+        <div ng-if="score < 30">
+            <button class="btn btn-success" ng-click="check('realDonaldTrump')"><img src="https://image.winudf.com/132/a57ab20c85d296/icon=100x.png">Trump</button>
             <button class="btn btn-danger" ng-click="check('false')"><img src="https://image.winudf.com/167/c788a323000941/icon=100x.png">False</button>
         </div>
     </div>

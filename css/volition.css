@@ -191,27 +191,38 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.well h3{
-    font-size: 50px;
+.panel h1{
+    font-size: 80px;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
 }
 
-@media (min-width: 900px){
-    .well h3{
-        text-align: center;
-        font-family: 'Josefin Sans', sans-serif;
-    }
+.well h3{
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
 
-    .well p{
-        font-size: 36px;
-        text-align: left;
-    }
+.panel h3{
+    font-size: 40px;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+}
 
-    .btn{
-        font-size: 30px;
-        width: 45%;
-    }
+.well p{
+    text-align: left;
+    font-size: 30px;
+}
+
+.panel p{
+    text-align: center;
+    font-size: 18px;
+}
+
+.well .btn{
+    font-size: 36px;
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 .excerpt-wrapper {
@@ -337,8 +348,9 @@ body {
 
 .footer {
     height: 70px;
+    position: fixed;
+    bottom: 0;
     width: 100%;
-    background-color: #333;
     line-height: 70px;
     padding-right: 50px;
     padding-left: 50px;
@@ -348,11 +360,11 @@ body {
 }
 
 .footer a {
-    color: grey;
+    color: #eee;
 }
 
 .footer a:hover {
-    color: lightgrey;
+    color: white;
 }
 
 .footer ul {

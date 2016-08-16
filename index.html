@@ -7,31 +7,12 @@
     <link href="css/volition.css" rel="stylesheet">
 </head>
 <body data-spy="scroll" data-target=".navbar" ng-controller="tweetCtrl">
-<div class="modal fade" tabindex="-1" role="dialog" id="testModal">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span>&times;</span></button>
-                <h4 class="modal-title">Download Volition</h4>
-            </div>
-            <div class="modal-body">
-                <p class="text-center">
-                    <a href="https://github.com/VolitionDevelopment/volition-theme/archive/master.zip" class="btn btn-success btn-lg">Download Zip</a>
-                    <a href="https://github.com/VolitionDevelopment/volition-theme" class="btn btn-info btn-lg">Visit Github</a>
-                </p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-danger" data-dismiss="modal" aria-label="Close">Close</button>
-            </div>
-        </div>
-    </div>
-</div>
 
 <div class="cover"></div>
 <div class="container" id="content">
     <nav class="navbar navbar-default navbar-fixed-top" role="navigation" id="navbar" ng-class="{'navbar-solid': !isActive('/')}">
         <div class="container-fluid">
-            <div class="navbar-header"> <a class="navbar-brand" href="#">TRUMP or FALSE</a></div>
+            <div class="navbar-header"> <a class="navbar-brand" href="#/">TRUMP or FALSE</a></div>
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="#/">Home</a></li>
                 <li ng-class="{'active': isActive('/about')}"><a href="#/about">About</a></li>
@@ -41,7 +22,14 @@
     </nav>
 
     <div ng-view></div>
+
+    <div class="footer">
+        <ul class="right">
+            <li>Made with &lt;3 by <a href="http://volition-dev.com">Volition Development</a></li>
+        </ul>
+    </div>
 </div>
+
 
 
 <script src="node_modules/angular/angular.min.js"></script>
@@ -50,5 +38,6 @@
 <script src="js/controllers/tweetCtrl.js"></script>
 <script src="js/controllers/aboutCtrl.js"></script>
 <script src="js/controllers/gameCtrl.js"></script>
+<script src="js/data/tweets.js"></script>
 </body>
 </html>
