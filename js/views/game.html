@@ -6,12 +6,13 @@
 
         <blockquote ng-if="tweets.length > 0">
             <p>{{randTweet.content}}</p>
-            <footer>Donald Trump</footer>
         </blockquote>
 
         <h1 ng-if="tweets.length == 0">You Win!</h1>
 
-        <button class="btn btn-success" ng-click="check('trump')">Trump</button>
-        <button class="btn btn-danger" ng-click="check('false')">False</button>
+        <div ng-if="tweets.length > 0">
+            <button class="btn btn-success" ng-click="check('trump')"><img src="https://image.winudf.com/132/a57ab20c85d296/icon=100x.png">Trump</button>
+            <button class="btn btn-danger" ng-click="check('false')"><img src="https://image.winudf.com/167/c788a323000941/icon=100x.png">False</button>
+        </div>
     </div>
 </div>

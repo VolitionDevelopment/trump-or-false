@@ -84,7 +84,7 @@ app.controller('gameCtrl', function($scope){
             real: 'trump'
         },
         {
-            content: "How amazing, the State Health Director who verified copies of Obama’s “birth certificate” died in plane crash today. All others lived",
+            content: "How amazing, the State Health Director who verified copies of Obama's \"birth certificate\" died in a plane crash today. All others lived",
             real: 'trump'
         },
         {
@@ -97,6 +97,22 @@ app.controller('gameCtrl', function($scope){
         },
         {
             content: "It doesn't really matter what the media write as long as you've got a young and beautiful piece of ass",
+            real: 'trump'
+        },
+        {
+            content: "The only kind of people I want counting my money are little short guys that wear Yamakas every day.",
+            real: 'trump'
+        },
+        {
+            content: "@cher - I don't wear a \"rug\" - it's mine. And I promise not to talk about your massive plastic surgeries that didn't work.",
+            real: 'trump'
+        },
+        {
+            content: "Healthy young child goes to doctor, gets pumped with massive shot of many vaccines, doesn't feel good and changes - AUTISM. Many such cases!",
+            real: 'trump'
+        },
+        {
+            content: "26,000 unreported sexual assults in the military-only 238 convictions. What did these geniuses expect when they put men & women together?",
             real: 'trump'
         }
     ];

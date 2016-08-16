@@ -181,6 +181,10 @@ body {
     margin-left: 100px;
 }
 
+.well{
+    text-align: center;
+}
+
 .well h1{
     font-size: 90px;
     text-align: center;
@@ -188,8 +192,26 @@ body {
 }
 
 .well h3{
+    font-size: 50px;
     text-align: center;
     font-family: 'Josefin Sans', sans-serif;
+}
+
+@media (min-width: 900px){
+    .well h3{
+        text-align: center;
+        font-family: 'Josefin Sans', sans-serif;
+    }
+
+    .well p{
+        font-size: 36px;
+        text-align: left;
+    }
+
+    .btn{
+        font-size: 30px;
+        width: 45%;
+    }
 }
 
 .excerpt-wrapper {
