@@ -5,6 +5,17 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:400,100,300' rel='stylesheet' type='text/css'>
     <link href="css/volition.css" rel="stylesheet">
+
+    <style>
+        .alert.ng-leave {
+            transition:0.5s linear all;
+            opacity:1;
+        }
+
+        .alert.ng-leave.ng-leave-active {
+            opacity:0;
+        }
+    </style>
 </head>
 <body data-spy="scroll" data-target=".navbar" ng-controller="tweetCtrl">
 
@@ -34,6 +45,7 @@
 
 <script src="node_modules/angular/angular.min.js"></script>
 <script src="node_modules/angular-route/angular-route.min.js"></script>
+<script src="node_modules/angular-animate/angular-animate.min.js"></script>
 <script src="js/trumporfalse.js"></script>
 <script src="js/controllers/tweetCtrl.js"></script>
 <script src="js/controllers/aboutCtrl.js"></script>

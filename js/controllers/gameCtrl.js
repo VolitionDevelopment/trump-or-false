@@ -1,7 +1,7 @@
 /**
  * Created by Jackson on 8/15/16.
  */
-app.controller('gameCtrl', function($scope, $http){
+app.controller('gameCtrl', function($scope, $http, $timeout){
     $scope.tweets = tweets;
     $scope.lost = false;
     var trumpData = null;
@@ -12,6 +12,7 @@ app.controller('gameCtrl', function($scope, $http){
         url: 'http://digitalcrafts.com/students/twitter/hashtag.php?hash=from%3ArealDonaldTrump%26result_type=popular'
     }).then(function success(data){
             trumpData = data;
+            console.log(data);
             $scope.randTweet = generateTweet();
         }, function failure(data){
 
@@ -28,22 +29,28 @@ app.controller('gameCtrl', function($scope, $http){
         }
 
         $scope.randTweet = generateTweet();
+
+        $timeout(function(){
+            $scope.lost = false;
+        }, 1000);
     };
 
     function generateTweet(){
+        var tweet;
         if(Math.floor(Math.random() * 2) === 1){
-            var tweet = tweets[Math.floor(Math.random() * tweets.length)];
+            tweet = tweets[Math.floor(Math.random() * tweets.length)];
             userName = tweet.screen_name;
 
-            return tweet;
         }else{
-            var tweet = trumpData.data.statuses[Math.floor(Math.random() * trumpData.data.statuses.length)];
+            tweet = trumpData.data.statuses[Math.floor(Math.random() * trumpData.data.statuses.length)];
             userName = tweet.user.screen_name;
-            return tweet;
         }
+
+        return tweet;
     }
 
     console.log(tweets);
-
     $scope.score = 0;
+
+
 });

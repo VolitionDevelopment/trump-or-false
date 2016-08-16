@@ -1,7 +1,7 @@
 /**
  * Created by Jackson on 8/15/16.
  */
-var app = angular.module('trump-or-false', ['ngRoute']);
+var app = angular.module('trump-or-false', ['ngRoute', 'ngAnimate']);
 
 
 app.directive('tweetHello', function(){
