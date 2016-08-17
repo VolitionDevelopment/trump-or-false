@@ -91,6 +91,10 @@ function generateTweets(){
             screen_name: 'false'
         },
         {
+            text: "We need a wall. China built a wall and kept out the barbarians for a thousand years!",
+            screen_name: 'false'
+        },
+        {
             text: "Truly weird Senator Rand Paul of Kentucky reminds me of a spoiled brat without a properly functioning brain. He was terrible at DEBATE!",
             screen_name: 'realDonaldTrump'
         },
