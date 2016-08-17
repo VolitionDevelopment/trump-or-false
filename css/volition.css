@@ -209,14 +209,18 @@ body {
     font-family: 'Josefin Sans', sans-serif;
 }
 
-.well p{
+.well blockquote p{
     text-align: left;
     font-size: 30px;
 }
 
-.panel p{
+.panel p, .well p{
     text-align: center;
     font-size: 18px;
+}
+
+.well p{
+    text-align: left;
 }
 
 .well .btn{
@@ -348,7 +352,7 @@ body {
 
 .footer {
     height: 70px;
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 100%;
     line-height: 70px;
@@ -376,6 +380,14 @@ body {
 .footer ul.right {
     float: right;
     padding-right: 30px;
+}
+
+.footer ul.center{
+    float: right;
+    position: relative;
+    left: -40%; /* or right 50% */
+    text-align: center;
+    padding: 0;
 }
 
 .footer ul li {

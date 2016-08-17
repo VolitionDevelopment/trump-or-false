@@ -5,19 +5,27 @@ app.controller('gameCtrl', function($scope, $http, $timeout){
     $scope.tweets = tweets;
     $scope.lost = false;
     var trumpData = null;
+    var trumpTweets = [];
     var userName = '';
+    populate();
+    generateTweets();
 
-    $http({
-        method: 'GET',
-        url: 'http://digitalcrafts.com/students/twitter/hashtag.php?hash=from%3ArealDonaldTrump%26result_type=popular'
-    }).then(function success(data){
-            trumpData = data;
-            console.log(data);
-            $scope.randTweet = generateTweet();
-        }, function failure(data){
+    function populate(){
+        $http({
+            method: 'GET',
+            url: 'http://digitalcrafts.com/students/twitter/hashtag.php?hash=from%3ArealDonaldTrump%26result_type=popular'
+        }).then(function success(data){
+                trumpData = data;
+                trumpTweets = trumpData.data.statuses;
+                console.log(data);
+                $scope.randTweet = generateTweet();
+            }, function failure(data){
 
-        }
-    );
+            }
+        );
+
+        console.log("Trump Tweets array populated.");
+    }
 
     $scope.check = function(answer){
         if(answer === userName){
@@ -26,6 +34,8 @@ app.controller('gameCtrl', function($scope, $http, $timeout){
         }else{
             $scope.lost = true;
             $scope.score = 0;
+            populate();
+            generateTweets();
         }
 
         $scope.randTweet = generateTweet();
@@ -37,20 +47,24 @@ app.controller('gameCtrl', function($scope, $http, $timeout){
 
     function generateTweet(){
         var tweet;
-        if(Math.floor(Math.random() * 2) === 1){
-            tweet = tweets[Math.floor(Math.random() * tweets.length)];
-            userName = tweet.screen_name;
 
-        }else{
-            tweet = trumpData.data.statuses[Math.floor(Math.random() * trumpData.data.statuses.length)];
+        if(trumpTweets.length > 0 && Math.floor(Math.random() * 4) === 1){
+            tweet = trumpTweets[Math.floor(Math.random() * trumpTweets.length)];
+            trumpTweets.splice(trumpTweets.indexOf(tweet), 1);
+            console.log(trumpTweets.length);
+            console.log("REMOVED: " + tweet.text);
+            console.log(trumpTweets);
             userName = tweet.user.screen_name;
+        }else{
+            tweet = tweets[Math.floor(Math.random() * tweets.length)];
+            tweets.splice(tweets.indexOf(tweet), 1);
+            userName = tweet.screen_name;
         }
+
 
         return tweet;
     }
 
     console.log(tweets);
     $scope.score = 0;
-
-
 });
