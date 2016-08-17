@@ -87,6 +87,10 @@ function generateTweets(){
             screen_name: 'false'
         },
         {
+            text: "A lot of really talented and intelligent people seem to think that Ted Cruz is the Zodiac Killer",
+            screen_name: 'false'
+        },
+        {
             text: "Truly weird Senator Rand Paul of Kentucky reminds me of a spoiled brat without a properly functioning brain. He was terrible at DEBATE!",
             screen_name: 'realDonaldTrump'
         },
