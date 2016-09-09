@@ -7,4 +7,6 @@ This application pulls a random tweet from either Donald Trump or the numerous p
 ## Technologies
 Trump or False uses the Twitter API to pull tweets down and uses Angular as the front-end.
 
+Live URL: http://trumporfalse.us <-- .us domain, of course.
+
 ![alt text](http://i.imgur.com/nKGe2g8.jpg "Trump? Or false?")
